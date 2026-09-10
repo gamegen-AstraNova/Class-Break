@@ -33,6 +33,23 @@ npm run preview -- --host 127.0.0.1 --port 8765 --strictPort
 
 ## GameGen layout
 
+### Direct HTML ZIP upload
+
+The 9:16 platform cover is maintained in `public/poster.webp`. Vite copies it to `dist/poster.webp`; it is a platform entry asset and is intentionally excluded from the in-game preload manifest.
+
+After `npm run build`, package the contents of `dist/`, not the directory itself:
+
+```powershell
+New-Item -ItemType Directory -Force ../noskin-delivery | Out-Null
+Compress-Archive -Path dist/* -DestinationPath ../noskin-delivery/class-break.zip -Force
+```
+
+The ZIP root contains the built `index.html`, `poster.webp`, and all runtime resources. Use only the game name for the project and ZIP; do not add architecture or format suffixes. This package runs from its bundled assets without skin processing or backend injection. Preview it over HTTP, including a non-root deployment path.
+
+Cover references and the generation prompt are documented in [POSTER.md](POSTER.md). Delivery checks and known limitations are documented in [DELIVERY.md](DELIVERY.md).
+
+### Source layout
+
 - Replaceable images: `public/common/textures/`
 - Replaceable music and sound effects: `public/common/audio/`
 - Bundled chalk typeface: `public/common/fonts/chalk_jp.otf`
