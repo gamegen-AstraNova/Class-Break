@@ -763,33 +763,6 @@ select {
   to { transform: translateX(-50%) scale(1.06) rotate(2deg); }
 }
 
-.teacher-status {
-  position: absolute;
-  z-index: 18;
-  top: 3%;
-  right: 3%;
-  max-width: calc(100vw - 24px);
-  padding: 12px 22px;
-  border: 5px solid var(--wood-light);
-  border-radius: 8px;
-  color: var(--chalk);
-  background: var(--board-dark);
-  box-shadow: 0 7px 0 var(--wood-dark);
-  font-size: clamp(1.25rem, 3.4vw, 1.8rem);
-  font-weight: 700;
-  line-height: 1.15;
-  text-align: center;
-}
-
-.teacher-status--warning {
-  color: #3c2b08;
-  background: var(--chalk-yellow);
-}
-
-.teacher-status--watching {
-  background: #9c3d42;
-}
-
 .result-screen {
   --result-inset: clamp(18px, 3vw, 42px);
   position: relative;
@@ -1225,12 +1198,6 @@ select {
 
   .attention-meter {
     left: 50%;
-  }
-
-  .teacher-status {
-    right: auto;
-    left: 50%;
-    transform: translateX(-50%);
   }
 
   .chair-layer {

@@ -388,11 +388,10 @@ export function GameScreen({
   };
   const progress = Math.min(100, (score / LESSON.targetScore) * 100);
   const remaining = LESSON.durationMs - elapsedMs;
-  const visibleStatusPhase = phase === 'warning' ? 'watching' : phase;
   const everyoneSlacking = allStudentsAreSlacking(holding, classmatesSlacking.length);
-  const statusKey = classroomAttention
-    ? everyoneSlacking ? 'status.allSlacking' : 'status.classmatesSlacking'
-    : `status.${visibleStatusPhase}`;
+  const attentionStatusKey = everyoneSlacking
+    ? 'status.allSlacking'
+    : 'status.classmatesSlacking';
   const teacherIsFacingClass = phase !== 'writing';
   const teacherKey: AssetKey = teacherIsFacingClass
     ? 'sym_teacher_teaching'
@@ -475,7 +474,7 @@ export function GameScreen({
             <div
               className="attention-meter"
               role="alert"
-              aria-label={t(statusKey)}
+              aria-label={t(attentionStatusKey)}
               style={{
                 '--attention-duration': `${LESSON.classroomAttentionMs}ms`,
               } as CSSProperties}
@@ -496,7 +495,6 @@ export function GameScreen({
               </span>
             </div>
           )}
-          <div className={`teacher-status teacher-status--${visibleStatusPhase}`}>{t(statusKey)}</div>
         </div>
       </section>
 

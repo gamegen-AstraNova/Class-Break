@@ -1,13 +1,13 @@
 # Class Break delivery
 
-Date: 2026-09-10. Direct playable HTML ZIP for GameGen, with the classroom group cover explicitly selected in the user's final attachment. The GitHub repository retains the complete React/TypeScript source and final cover; the local source checkout is removed after successful push as requested by the user.
+Date: 2026-09-16. Direct playable HTML ZIP for GameGen, with the classroom group cover explicitly selected in the user's final attachment. The gameplay teacher-status prompt was removed from its authoritative React component together with its obsolete styles and locale strings.
 
 ## Package
 
-- Name: `class-break.zip`, placed alongside the other games in `noskin-delivery/`.
+- Name: `Class Break.zip`, placed alongside the other games in `noskin-delivery/`.
 - ZIP root: built `index.html`, one `poster.webp`, `assets/`, `common/`, and `config/`.
-- 45 runtime files, 51,169,177 bytes.
-- SHA-256: `bcc39fdd5635a669d7fbeecf9321739cb4721a6180ce78784278de0df142cf12`.
+- 45 runtime files, 17,955,009 bytes.
+- SHA-256: `568bb319de44880509bd2ddee4bd9302aee251403980bf15d2a6ea4f7f58431e`.
 - Cover: lossless WebP, 936 × 1664, exact 9:16. Source `public/poster.webp`, copied to `dist/poster.webp` by Vite; not added to the gameplay manifest.
 - ZIP contains no source, dependency directories, Git metadata, test output, prompt documents, or candidate images.
 
@@ -20,7 +20,8 @@ Date: 2026-09-10. Direct playable HTML ZIP for GameGen, with the classroom group
 - ZIP CRC, unique entry names, root index/cover, poster decode and aspect ratio passed.
 - All 45 extracted files returned matching bytes over HTTP at `/class-break/`; every ZIP file matches the local build.
 - Browser: preload reaches the explicit Enter game gate, entering opens the homepage, all four locale options change UI text, BGM toggle changes state, Lumi can enter a class, complete the 60-second countdown, and reach the time-up result screen. No warning/error logs or broken visible images were observed.
-- All four locale files contain the same 47 keys. English is the fresh-session default.
+- All four locale files contain the same 45 keys. English is the fresh-session default.
+- The removed `.teacher-status` element, its responsive/style rules, and the unused `status.writing` / `status.watching` locale keys are absent from source and production output.
 
 ## Assets and fallback
 
