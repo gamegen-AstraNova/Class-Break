@@ -61,3 +61,7 @@ Cover references and the generation prompt are documented in [POSTER.md](POSTER.
 Every image and audio file independently probes `style`, `commonPath`, local `common/`, then local public paths. Locale files independently probe `style`, `commonPath`, then the local language file. Invalid or incomplete remote skins fall through without blocking the game.
 
 The release backend should merge its normalized `assets.baseUrl` into `commonPath` so that `commonPath + relativePath` points directly to the published `textures/` directory.
+
+## 2026-09-16 asset optimization
+
+All 26 runtime PNG textures were replaced at their authoritative paths with dimension- and alpha-preserving high-quality WebP files. The production build and 28 automated tests passed, and the rebuilt delivery ZIP fell from 48.80 MB to 17.11 MB.

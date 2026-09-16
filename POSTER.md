@@ -4,7 +4,7 @@ Final cover: the exact anatomy-corrected classroom group illustration attached i
 
 The final attached source is 941 × 1672. It is center-cropped by 5 pixels horizontally and 8 vertically to 936 × 1664 (exact 9:16), without resizing, and encoded as lossless WebP at `public/poster.webp`. The resulting decoded pixels were compared directly with that crop of the selected attachment. No drawing was performed after this final selection.
 
-Tool: built-in image_gen. Initial composition references: user-supplied AstraNova LoRA Asteria/Asteria_1.png, Nyx/Nyx_1.png, Lumi/Lumi_1.png, plus game uniform references `public/common/textures/sym_asteria_slack.png` and `sym_nyx_slack.png`. The final structural edit used the initial group composition as its single target.
+Tool: built-in image_gen. Initial composition references: user-supplied AstraNova LoRA Asteria/Asteria_1.png, Nyx/Nyx_1.png, Lumi/Lumi_1.png, plus game uniform references `public/common/textures/sym_asteria_slack.webp` and `sym_nyx_slack.webp`. The final structural edit used the initial group composition as its single target.
 
 ## Composition prompt
 

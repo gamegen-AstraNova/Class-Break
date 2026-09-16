@@ -56,16 +56,16 @@ describe('GameGen asset fallback', () => {
   it('keeps the required fallback order for every asset', () => {
     expect(
       buildAssetCandidates(
-        'textures/bg_classroom.png',
+        'textures/bg_classroom.webp',
         'https://style.example/skin/',
         'https://cdn.example/common/',
         './',
       ),
     ).toEqual([
-      'https://style.example/skin/textures/bg_classroom.png',
-      'https://cdn.example/common/textures/bg_classroom.png',
-      './common/textures/bg_classroom.png',
-      './textures/bg_classroom.png',
+      'https://style.example/skin/textures/bg_classroom.webp',
+      'https://cdn.example/common/textures/bg_classroom.webp',
+      './common/textures/bg_classroom.webp',
+      './textures/bg_classroom.webp',
     ]);
   });
 
